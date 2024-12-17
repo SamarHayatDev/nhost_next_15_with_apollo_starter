@@ -6,7 +6,7 @@ export async function middleware(request: NextRequest) {
   const accessToken =
     request.cookies.get("nhostRefreshToken")?.value ||
     request.nextUrl.searchParams.get("refreshToken");
-
+  //
   const isLoginPath = request.nextUrl.pathname === "/login";
 
   if (isLoginPath) {
