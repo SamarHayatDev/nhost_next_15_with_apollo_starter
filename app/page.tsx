@@ -1,9 +1,7 @@
-import Test from "./test";
-
 export default function Home() {
   return (
     <>
-      <Test />
+      <h1>Welcome </h1>
     </>
   );
 }

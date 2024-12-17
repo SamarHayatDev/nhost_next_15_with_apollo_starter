@@ -6,8 +6,9 @@ const httpLink = createHttpLink({
   uri: process.env.NEXT_PUBLIC_NHOST_GRAPHQL_URL,
 });
 
-const authLink = setContext(async (_: any, { headers }: any) => {
+const authLink = setContext(async (_, { headers }) => {
   const token = await nhost.auth.getAccessToken();
+
   return {
     headers: {
       ...headers,
